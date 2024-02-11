@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "ef1d2dca-c3ce-4459-9d27-224a78182997",
+		"name": "Sports Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16962631"
+	},
+	"item": [
+		{
+			"name": "Get Matches for tour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tour/matches/?name=Indian Premier League, 2023&page=1&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tour",
+						"matches",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Indian Premier League, 2023"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sport/tour/match/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sport",
+						"tour",
+						"match",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Indian Premier League, 2023",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post News",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestType\" : \"Match\",\r\n    \"id\" : \"1\",\r\n    \"title\": \"News for Match 1\",\r\n    \"description\": \"New News for 1st Match\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/news"
+			},
+			"response": []
+		},
+		{
+			"name": "Get News by Match",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/news/match/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get News by Tour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/news/tour/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get News by Sport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/news/sport/2"
+			},
+			"response": []
+		}
+	]
+}
